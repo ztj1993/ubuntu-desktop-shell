@@ -31,16 +31,16 @@ sudo apt-get install -y containerd.io
 sudo usermod -aG docker ${USER}
 
 # 配置文件
-mkdir -p /etc/docker
+sudo mkdir -p /etc/docker
 echo '{
-	"hosts": [
-		"tcp://0.0.0.0:2375",
-		"unix:///var/run/docker.sock"
-	],
-	"registry-mirror": [
-		"https://dufe2rks.mirror.aliyuncs.com",
-		"https://reg-mirror.qiniu.com"
-	]
+  "hosts": [
+    "tcp://0.0.0.0:2375",
+    "unix:///var/run/docker.sock"
+  ],
+  "registry-mirror": [
+    "https://dufe2rks.mirror.aliyuncs.com",
+    "https://reg-mirror.qiniu.com"
+  ]
 }' | sudo tee /etc/docker/daemon.json
 
 echo "docker installed"

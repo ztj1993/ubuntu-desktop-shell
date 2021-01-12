@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # 清理遗留
-sudo apt-get remove -y docker > /dev/null 2>&1
-sudo apt-get remove -y docker-engine > /dev/null 2>&1
-sudo apt-get remove -y docker.io > /dev/null 2>&1
-sudo apt-get remove -y containerd > /dev/null 2>&1
-sudo apt-get remove -y runc > /dev/null 2>&1
+sudo apt-get remove -y docker
+sudo apt-get remove -y docker-engine
+sudo apt-get remove -y docker.io
+sudo apt-get remove -y containerd
+sudo apt-get remove -y runc
 
 set -e
 
